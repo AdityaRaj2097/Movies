@@ -15,3 +15,22 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+// sortByRatings = (e) => {
+//   let className = e.target.className;
+//   let sortedMovies;
+//   let { movies } = this.props;
+//   if (className == "fas fa-sort-up") {
+//     sortedMovies = movies.sort((movieObjA, movieObjB) => {
+//       return movieObjA.dailyRentalRate - movieObjB.dailyRentalRate;
+//     });
+//   } else {
+//     sortedMovies = movies.sort((movieObjA, movieObjB) => {
+//       return movieObjB.dailyRentalRate - movieObjA.dailyRentalRate;
+//     });
+//   }
+//   this.props.setMovies(sortedMovies);
+// };
