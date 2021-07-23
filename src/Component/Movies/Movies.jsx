@@ -25,6 +25,27 @@ class Movies extends Component {
     });
   }
 
+  sortByStock = (e) => {
+    let className = e.target.className.trim();
+    console.log(" in stock function");
+    let sortedMovies;
+    let movies = this.state.movies;
+
+    if (className == "fas fa-sort-up") {
+      sortedMovies = movies.sort((movieObjA, movieObjB) => {
+        return movieObjA.numberInStock - movieObjB.numberInStock;
+      });
+    } else {
+      sortedMovies = movies.sort((movieObjA, movieObjB) => {
+        return movieObjB.numberInStock - movieObjA.numberInStock;
+      });
+    }
+
+    this.setState({
+      movies: sortedMovies,
+    });
+  };
+
   render() {
     console.log(this.state.movies);
     let filterArr = this.state.movies;
